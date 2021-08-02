@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Image, SafeAreaView, View, StyleSheet, Text, FlatList } from 'react-native'
+import { Image, SafeAreaView, View, StyleSheet, Text, FlatList, TouchableOpacity } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler';
 import Feather from 'react-native-vector-icons/Feather';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -10,7 +10,7 @@ import popularData from '../assets/data/popularData'
 Feather.loadFont();
 MaterialCommunityIcons.loadFont();
 
-export default function Home() {
+export default function Home({navigation}) {
   //for <flatList/> component
 const renderCategoryItem=({item})=>{
     return (
@@ -86,12 +86,18 @@ style={[
         <View style={styles.popularWrapper}>
           <Text style={styles.popularTitle}>Popular</Text>
           {popularData.map((item)=>(
-            <View 
+            //click on item then go to another page
+            <TouchableOpacity 
             key={item.id}
+            onPress = {()=>navigation.navigate('Details',{
+              item: item,
+            })
+            }>
+            <View 
             style={[styles.popularCardWrapper,
               //margin between popular and top of the week
               {
-                marginTop: item.id == 1 ? 10 : 20, 
+                marginTop: item.id == 1 ? 10 : 20,
               }
             ]}>
                <View>
@@ -137,7 +143,8 @@ style={[
               <View style={styles.popularCardRight}>
                 <Image source={item.image} style={styles.popularCardImage}/>
               </View>
-            </View>  
+            </View>
+           </TouchableOpacity>  
            ))}
         </View>
         </ScrollView>

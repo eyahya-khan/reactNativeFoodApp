@@ -3,7 +3,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from './components/Home';
-
+import Details from './components/Details';
 
 const Stack = createStackNavigator();
 
@@ -13,10 +13,22 @@ export default function App() {
     //follow: https://reactnavigation.org/docs/getting-started
     <NavigationContainer>
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} 
+      <Stack.Screen 
+      name="Home" 
+      component={Home} 
       //here options for disappear header menu
-      options={{headerShown:false}}
-      />
+      options={{
+      headerShown:false
+      }}
+     />
+      <Stack.Screen
+          name="Details"
+          component={Details}
+          //here options for disappear header menu
+          options={{
+          headerShown: false,
+          }}
+       />
     </Stack.Navigator>
   </NavigationContainer>
   );

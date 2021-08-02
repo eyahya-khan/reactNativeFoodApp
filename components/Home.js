@@ -52,7 +52,7 @@ style={[
            <SafeAreaView>
                 <View style={styles.headerWrapper}>
                     <Image 
-                    source={require('../assets/images/profile.png')} 
+                    source={require('../assets/images/profile1.jpg')} 
                     style={styles.profileImage}
                     />
                  <Feather name="menu" size={24} color={colors.textDark}/>
@@ -134,7 +134,7 @@ style={[
                       <MaterialCommunityIcons 
                       name='star' 
                       size={20} 
-                      color={colors.textDark}
+                      color={colors.secondary}
                       />
                       <Text style={styles.rating}>{item.rating}</Text>
                     </View>

@@ -35,7 +35,7 @@ const renderPopularItem=({item})=>{
                     </View>
                     </TouchableOpacity>
                     <View style={styles.headerRight}>
-                        <MaterialCommunityIcons name='star' size={12} color={colors.textDark}/>
+                        <MaterialCommunityIcons name='star' size={12} color={colors.secondary}/>
                     </View>
                 </View>
             </SafeAreaView>
@@ -96,6 +96,10 @@ const renderPopularItem=({item})=>{
 }
 
 const styles = new StyleSheet.create({
+  image:{
+    width:200,
+    height:200,
+  },
     container: {
       flex: 1,
     },
@@ -193,7 +197,9 @@ const styles = new StyleSheet.create({
       elevation: 2,
     },
     ingredientImage: {
-      resizeMode: 'contain',
+      width:80,
+      height:80,
+    resizeMode: 'contain',
     },
     orderWrapper: {
       marginTop: 30,

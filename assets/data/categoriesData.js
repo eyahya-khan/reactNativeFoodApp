@@ -1,8 +1,8 @@
 const categoriesData = [
     {
       id: '1',
-      image: require('../images/pizza-icon.png'),
-      title: 'Pizza',
+      image: require('../images/spicyfood-icon.png'),
+      title: 'Spicyfood',
       selected: true,
     },
     {

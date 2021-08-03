@@ -8,7 +8,7 @@ const popularData = [
       price: 110,
       sizeName: 'Medium',
       sizeNumber: 14,
-      crust: 'Thin Crust',
+      crust: 'Very Strong',
       deliveryTime: 30,
       ingredients: [
         {
@@ -42,7 +42,7 @@ const popularData = [
       price: 120,
       sizeName: 'Small',
       sizeNumber: 10,
-      crust: 'Thick Crust',
+      crust: 'Medium Spicy',
       deliveryTime: 40,
       ingredients: [
         {
@@ -66,7 +66,7 @@ const popularData = [
       price: 125,
       sizeName: 'Large',
       sizeNumber: 18,
-      crust: 'Thin Crust',
+      crust: 'Lower Strong',
       deliveryTime: 40,
       ingredients: [
         {

@@ -7,6 +7,7 @@ import colors from '../assets/colors/colors'
 import categoriesData from '../assets/data/categoriesData';
 import popularData from '../assets/data/popularData'
 
+
 Feather.loadFont();
 MaterialCommunityIcons.loadFont();
 
@@ -55,7 +56,12 @@ style={[
                     source={require('../assets/images/profile1.jpg')} 
                     style={styles.profileImage}
                     />
+                  {/* must stack.screen on app.js page to navigate to menu page */}
+                  <TouchableOpacity
+                  onPress={() => navigation.navigate('Menu')}
+                  >
                  <Feather name="menu" size={24} color={colors.textDark}/>
+                 </TouchableOpacity>
                 </View>
            </SafeAreaView>
            {/* Titles */}
